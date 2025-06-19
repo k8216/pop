@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #B4C5D4;
+      overflow-x: hidden;
+      position: relative;
+      
+  background-image: url(images/photo-1530273883449-aae8b023c196.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+overflow-x: hidden;
+min-height: 100vh;
+  
+  
+    }
+
+    header h1 {
+      font-size: 64px;
+      font-weight: 70;
+      padding: 20px;
+    }
+
+    .background {
+      background-color: black;
+      width: 740px;
+      margin-left: 35%;
+      padding: 40px;
+      border-radius: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .nav-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .navlogo {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navlogo a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .github-icon {
+      font-size: 20px;
+      color: white;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero-text {
+      max-width: 60%;
+      color: #B4C5D4;
+    }
+
+    .hero-subtext {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero-text h2 {
+      font-size: 18px;
+      color: white;
+      text-decoration: underline;
+      margin-top: 20px;
+    }
+
+    .hero-image img {
+      width: 320px;
+      height: 320px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 20px;
+    }
+
+    .section-heading h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #B4C5D4;
+      text-transform: lowercase;
+      margin: 0;
+    }
+
+    .section-heading .line {
+      flex-grow: 1;
+      height: 2px;
+      background-color: #B4C5D4;
+      opacity: 0.6;
+    }
+
+    .skill {
+      color: white;
+      font-size: 25px;
+      font-weight: 1000;
+      display: flex;
+      gap: 150px;
+    }
+
+    .skill ul {
+      list-style-type: none;
+      font-size: small;
+      font-weight: 100;
+      text-decoration: underline;
+    }
+
+    /* Bubble Animation */
+    .bubble-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -60px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: rise 6s linear infinite;
+    }
+
+    .bubble:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { left: 20%; animation-delay: 1s; }
+    .bubble:nth-child(3) { left: 30%; animation-delay: 2s; }
+    .bubble:nth-child(4) { left: 40%; animation-delay: 3s; }
+    .bubble:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+    .bubble:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+    .bubble:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+    .bubble:nth-child(8) { left: 80%; animation-delay: 2.2s; }
+    .bubble:nth-child(9) { left: 90%; animation-delay: 3.3s; }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Bubbles above everything -->
+  <div class="bubble-wrap">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <header>
+    <h1><span style="color: #2E3A59;">Port</span><span style="color: black;">Folio</span></h1>
+  </header>
+  
+
+
+  <div class="background">
+    <nav class="navbar">
+      <div class="logo">Emadalmagedy</div>
+      <div class="nav-wrapper">
+        <ul class="navlogo">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Work</a></li>
+        </ul>
+      </div>
+      <div class="github-icon">
+        <a href="https://github.com/yourusername" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="hero-text">
+        <p class="hero-subtext">Hello, I am Kunal,</p>
+        <h1 class="hero-title">Fullstack<br>Developer</h1>
+        <h2><a href="#" style="color: white;">Contact Me</a></h2>
+      </div>
+      <div class="hero-image">
+        <img src="images/ChatGPT Image Jun 19, 2025, 09_42_45 AM.png" alt="My Profile Picture">
+      </div>
+    </div>
+
+    <div class="section-heading" id="about">
+      <h2>about</h2>
+      <div class="line"></div>
+    </div>
+
+    <p style="color: white;">
+      Skilled in full-stack development with a focus on clean, responsive design and user experience. Combines a creative eye for UI with solid coding practices in HTML, CSS, JavaScript, and backend logic. Continuously learning and refining through hands-on projects and problem-solving.
+    </p>
+
+    <br>
+
+    <div class="skill">
+      <div>FrontEnd
+        <ul>90+ hours experience</ul>
+      </div>
+      <div>Python
+        <ul>4 year experience</ul>
+      </div>
+      <div>Machine Learning
+        <ul>120+ hours experience</ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
